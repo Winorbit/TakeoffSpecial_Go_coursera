@@ -18,10 +18,11 @@ type User struct{
 }
 
 func (u User) sayHello(){
+	//u выполняет здесь роль Reciever - получателя метода, т.е того места, к которому нужно прикепить функцию
 	fmt.Println("Hello")
 }
 
-// использум значения, заданные в Struct внутри нашего метода.
+// используем значения, заданные в Struct внутри нашего метода.
 // Это его главное отличие от обычной функции - метод находиться в зоне видимости type, и имеет доступ к его значениям 
 func (u User) presntMe(){
 	fmt.Printf("Hello, my name is %v, and my english level is %v \n", u.Name, u.EnglishLevel)
