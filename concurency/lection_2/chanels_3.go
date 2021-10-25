@@ -7,9 +7,7 @@ func main() {
   outcomeMessages := make(chan string)
   incomeMessages := make(chan string)
 
-  // Закидываем в горутины функции, обрабатывающие каналы. Они сработают только после заполнения канала.
-  go processMessage(incomeMessages, outcomeMessages)
-  go processMessage(incomeMessages, outcomeMessages)
+  // Закидываем в горутину функцию, обрабатывающую каналы. Она сработает только после заполнения его заполнения.
   go processMessage(incomeMessages, outcomeMessages)
 
   // Здесь запускаем процесс наполнения канала с исходящими сообщениями в еще одной горутине

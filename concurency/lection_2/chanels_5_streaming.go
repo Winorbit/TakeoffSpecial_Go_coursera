@@ -13,6 +13,7 @@ func main(){
    }
 }
 
+
 func streamLogs(logs []string, ch chan string){
     defer close(ch)
     for _, log := range logs{

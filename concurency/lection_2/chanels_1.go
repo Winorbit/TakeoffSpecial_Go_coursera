@@ -9,6 +9,7 @@ func main(){
   messagesChan := make(chan string) 
   // messagesChan := make(chan string, 2)
 
+  
   go func(){messagesChan <- messages[0]}()
   go func(){messagesChan <- messages[1]}()
   go func(){messagesChan <- messages[2]}()
