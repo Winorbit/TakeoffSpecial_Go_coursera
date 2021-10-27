@@ -8,7 +8,9 @@ func main(){
   // var messagesChan chan string = make(chan string) // канал для данных типа string
   messagesChan := make(chan string) // канал для данных типа string
 
-  // messagesChan <- "Hello"
+  messagesChan <- "Hello"
+  
+  
   go func(){
     fmt.Println("Go routine starts")
     messagesChan <- "Hello" // Анонинмная функция в горутине закидывает данные в канал messagesChan

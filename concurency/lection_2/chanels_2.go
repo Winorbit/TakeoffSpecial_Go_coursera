@@ -14,7 +14,7 @@ func main(){
   fmt.Println(<-messagesChan)
 }
 
-func sendMessageToChanel(message string, out chan<- string){
-// func sendMessageToChanel(message string, out chan string){
+// func sendMessageToChanel(message string, out chan<- string){
+func sendMessageToChanel(message string, out chan string){
   out <- message
-}
+ }

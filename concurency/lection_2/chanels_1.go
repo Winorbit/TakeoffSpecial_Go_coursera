@@ -1,7 +1,7 @@
 package main
 
 import ("fmt"
-        // "time"
+        "time"
       )
 
 func main(){
@@ -10,29 +10,30 @@ func main(){
   // messagesChan := make(chan string, 2)
 
   
-  go func(){messagesChan <- messages[0]}()
-  go func(){messagesChan <- messages[1]}()
-  go func(){messagesChan <- messages[2]}()
-  go func(){messagesChan <- messages[3]}()
+  // go func(){messagesChan <- messages[0]}()
+  // go func(){messagesChan <- messages[1]}()
+  // go func(){messagesChan <- messages[2]}()
+  // go func(){messagesChan <- messages[3]}()
 
-  fmt.Println(<-messagesChan)
-  fmt.Println(<-messagesChan)
-  fmt.Println(<-messagesChan)
-  fmt.Println(<-messagesChan)
+  // fmt.Println(<-messagesChan)
+  // fmt.Println(<-messagesChan)
+  // fmt.Println(<-messagesChan)
+  // fmt.Println(<-messagesChan)
 
 
-  /*
-  for _, mess := range messages{
-    go func(){messagesChan <- mess}()
-  }
+  
+  // for _, mess := range messages{
+  //   fmt.Println(mess)
+  //   go func(){messagesChan <- mess}()
+  // }
 
-  fmt.Println(<-messagesChan)
-  fmt.Println(<-messagesChan)
-  fmt.Println(<-messagesChan)
-  fmt.Println(<-messagesChan)
-  */
+  // fmt.Println(<-messagesChan)
+  // fmt.Println(<-messagesChan)
+  // fmt.Println(<-messagesChan)
+  // fmt.Println(<-messagesChan)
+  
 
-  /*
+  
   go func() {
     messagesChan <- messages[0]
     messagesChan <- messages[1]
@@ -47,6 +48,7 @@ func main(){
   go fmt.Println(<-messagesChan)
   // go fmt.Println(<-messagesChan)
 
-  time.Sleep(time.Second)
-  */
+  time.Sleep(time.Second)  
 }
+
+
